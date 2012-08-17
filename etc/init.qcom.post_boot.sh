@@ -99,8 +99,10 @@ case "$target" in
 	 chmod 220 /sys/devices/system/cpu/mfreq
 	 chown root.system /sys/devices/system/cpu/cpu1/online
 	 chmod 664 /sys/devices/system/cpu/cpu1/online
-# set scheduler as CFQ after boot complete.( scheduler is set as deadline at defconfig file )
-	 echo "cfq" > /sys/block/mmcblk0/queue/scheduler
+# overclock gpu a smidge
+	 echo 300000000 > /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_gpuclk
+	 echo 228571000 > /sys/devices/platform/kgsl-2d0.0/kgsl/kgsl-2d0/max_gpuclk
+	 echo 228571000 > /sys/devices/platform/kgsl-2d1.1/kgsl/kgsl-2d1/max_gpuclk
         ;;
 esac
 
