@@ -83,6 +83,8 @@ persist.radio.add_power_save=1
 # System proverty snapshot disable
 persist.radio.snapshot_disabled=1
 
+ro.telephony.sends_barcount=true
+
 # notify vold we have internal and external sd
 ro.additionalmounts=/mnt/emmc
 ro.vold.switchablepair=/mnt/sdcard,/mnt/emmc
