@@ -62,3 +62,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # boot animation sound
 PRODUCT_COPY_FILES += \
     device/samsung/quincyatt/boot_audio.mp3:system/media/boot_audio.mp3
+
+# custom init script
+PRODUCT_COPY_FILES += \
+    device/samsung/quincyatt/etc/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh
