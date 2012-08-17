@@ -38,3 +38,27 @@ PRODUCT_DEVICE := quincyatt
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := SAMSUNG-SGH-I717
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.enable-scan=false \
+    ro.vendor.extension_library=/system/lib/libqc-opt.so \
+    ro.qualcomm.cabl=0 \
+    ro.com.google.locationfeatures=1 \
+    ro.com.google.gmsversion=4.0_r2 \
+    ro.ril.set.mtu1472=1 \
+    persist.sys.usb.config=mass_storage \
+    dalvik.vm.checkjni=false \
+    dalvik.vm.dexopt-flags=m=y,v=n,o=v \
+    ro.cm.version=h0tsauce-9-$(shell date -u +%Y%m%d) \
+    ro.modversion=$(shell date -u +%Y%m%d)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.developerid=h0tw1r3 \
+    ro.goo.developerid=h0tw1r3 \
+    ro.goo.rom=h0tsauce-9 \
+    ro.goo.version=$(shell date -u +%Y%m%d) \
+    ro.goo.board=SGH-I717
+
+# boot animation sound
+PRODUCT_COPY_FILES += \
+    device/samsung/quincyatt/boot_audio.mp3:system/media/boot_audio.mp3
