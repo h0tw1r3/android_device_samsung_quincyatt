@@ -22,7 +22,11 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/quincyatt/overlay
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/quincyatt/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    device/samsung/quincyatt/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/base/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml
 
 # Inherit from quincy-common
 $(call inherit-product, device/samsung/quincy-common/quincy-common.mk)
